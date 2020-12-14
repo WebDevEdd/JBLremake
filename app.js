@@ -50,3 +50,44 @@ function splashAnimation(){
 
 }
 splashAnimation();
+
+function headphonesArrows(){
+    //buttons
+    const leftArrow = document.getElementById('leftArrow');
+    const rightArrow = document.getElementById('rightArrow');
+    //headphone image
+    const headphones = [];
+    //headphones
+    const blackheadphones = document.getElementById('blackheadphones')
+    const blueheadphones = document.getElementById('blueheadphones')
+    const redheadphones = document.getElementById('redheadphones')
+    //push to array
+    headphones.push(blackheadphones);
+    headphones.push(blueheadphones);
+    headphones.push(redheadphones);
+
+    var colors =  ['Black', 'Blue', 'Red'];
+
+    const colorSpan = document.getElementById('headphone-color');
+    counter = 0;
+
+    
+
+    rightArrow.addEventListener('click', function(){
+        var el1 = headphones[counter];
+        el1.style.display = 'none';
+        counter++;
+        if (counter > 2){
+            counter = 0;
+        }
+        var el2 = headphones[counter];
+        el2.style.display = 'block';
+        colorSpan.innerHTML = colors[counter];
+    })
+    leftArrow.addEventListener('click', function(){
+        counter--;
+    })
+
+
+}
+headphonesArrows();

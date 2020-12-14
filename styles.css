@@ -182,14 +182,17 @@ body{
     align-items: center;
     flex-direction: column;
 }
-#headphoneScrollImg{
-    height: 500px;
-}
 .product-image-container{
     height: 500px;
     width: 500px;
     overflow: hidden;
     margin: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-image-container img{
+    height: 500px;
 }
 .headphones-title{
     font-size: 64px;
@@ -236,4 +239,10 @@ body{
 }
 .arrows-container img:hover{
     transform: scale(1.2);
+}
+#blueheadphones{
+    display: none;
+}
+#redheadphones{
+    display: none;
 }
