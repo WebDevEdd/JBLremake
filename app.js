@@ -71,7 +71,11 @@ function headphonesArrows(){
     const colorSpan = document.getElementById('headphone-color');
     counter = 0;
 
+    //cart
+    const cart = document.querySelector('.products-container-cart');
     
+    //add to cart btn
+    const addToCart = document.querySelector('.add-to-cart');
 
     rightArrow.addEventListener('click', function(){
         var el1 = headphones[counter];
@@ -97,6 +101,37 @@ function headphonesArrows(){
         colorSpan.innerHTML = colors[counter];
     })
 
+    addToCart.addEventListener('click', function(){
+        var newRow = document.createElement('div');
+        newRow.classList.add('product-row');
+
+        var newImg = document.createElement('img');
+        newImg.src = headphones[counter].src;
+        newImg.classList.add('cart-row-img');
+
+        var newPrice = document.createElement('h3');
+        newPrice.classList.add('headphones-price');
+        newPrice.innerHTML = '299.99';
+
+        var newQty = document.createElement('p');
+        newQty.classList.add('qty-cart');
+        newQty.innerHTML = '1';
+
+        var closeBtn = document.createElement('button');
+        closeBtn.innerHTML = 'x';
+        
+
+        cart.appendChild(newRow);
+        newRow.appendChild(newImg);
+        newRow.appendChild(newPrice);
+        newRow.appendChild(newQty);
+        newRow.appendChild(closeBtn);
+
+        closeBtn.addEventListener('click', function(){
+            closeBtn.parentElement.remove();
+        })
+    })
+
 }
 headphonesArrows();
 
@@ -105,6 +140,7 @@ function scrollFunction(){
     const headphonesBtn = document.getElementById('headphones-section-btn');
     const homeaudioBtn = document.getElementById('homeaudio-section-btn');
     const speakersBtn = document.getElementById('speakers-section-btn');
+    const heroBtn = document.querySelector('.hero-shop-now')
 
     //sections
     const headphones = document.querySelector('.products-section');
@@ -122,5 +158,6 @@ function scrollFunction(){
     scrollto(headphonesBtn, headphones);
     scrollto(homeaudioBtn, homeaudio);
     scrollto(speakersBtn, speaker);
+    scrollto(heroBtn, headphones);
 }
 scrollFunction();
