@@ -99,3 +99,28 @@ function headphonesArrows(){
 
 }
 headphonesArrows();
+
+function scrollFunction(){
+    //buttons
+    const headphonesBtn = document.getElementById('headphones-section-btn');
+    const homeaudioBtn = document.getElementById('homeaudio-section-btn');
+    const speakersBtn = document.getElementById('speakers-section-btn');
+
+    //sections
+    const headphones = document.querySelector('.products-section');
+    const homeaudio = document.querySelector('.home-audio');
+    const speaker= document.querySelector('.speakers');
+
+    function scrollto(btn, section){
+        btn.addEventListener('click', function(){
+            const topOfSection = section.getBoundingClientRect().top;
+            window.scrollTo(0, topOfSection);
+
+            console.log(topOfSection);
+        })
+    }
+    scrollto(headphonesBtn, headphones);
+    scrollto(homeaudioBtn, homeaudio);
+    scrollto(speakersBtn, speaker);
+}
+scrollFunction();
