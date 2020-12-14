@@ -20,3 +20,33 @@ function sideMenuAnimation(){
 
 }
 sideMenuAnimation();
+
+function splashAnimation(){
+    //herosection for mouse listener
+    const heroSection = document.querySelector('.hero');
+    //images
+    const splashImg = document.getElementById('hero-splash');
+    const splatter1 = document.getElementById('splatter1');
+    const splatter2 = document.getElementById('splatter2');
+    const splatter3 = document.getElementById('splatter3');
+    //speeds
+    const splashImgSpeed = splashImg.getAttribute('data-speed');
+    const splatter1Speed = splatter1.getAttribute('data-speed');
+    const splatter2Speed = splatter2.getAttribute('data-speed');
+    const splatter3Speed = splatter3.getAttribute('data-speed');
+
+    function imageMoveAway(el, speed){
+        heroSection.addEventListener('mousemove', function(e){
+            var mouseX = -e.pageX / speed;
+            var mouseY = -e.pageY / speed;
+            
+            el.style.transform = 'translateX(' + mouseX + 'px) translateY(' + mouseY + 'px)';
+        })
+    }
+    imageMoveAway(splashImg, splashImgSpeed);
+    imageMoveAway(splatter1, splatter1Speed);
+    imageMoveAway(splatter2, splatter2Speed);
+    imageMoveAway(splatter3, splatter3Speed);
+
+}
+splashAnimation();
