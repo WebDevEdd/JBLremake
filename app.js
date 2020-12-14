@@ -161,3 +161,20 @@ function scrollFunction(){
     scrollto(heroBtn, headphones);
 }
 scrollFunction();
+
+function cartSlide(){
+    const cartIcon = document.getElementById('shopping-bag-icon');
+
+    const closeBtn = document.querySelector('.close-btn');
+
+    const cart = document.querySelector('.cart');
+
+    function slide(e){
+    e.addEventListener('click', function(){
+        cart.classList.toggle('cartToggle');
+    })
+    }   
+    slide(cartIcon);
+    slide(closeBtn);
+}
+cartSlide();

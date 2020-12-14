@@ -352,6 +352,7 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .speakers-cards{
     width: 300px;
@@ -379,6 +380,27 @@ html{
     margin-bottom: 10px;
     cursor: pointer;
 }
+@media screen and (max-width: 872px){
+    .home-audio{
+        height: fit-content;
+    }
+    .speakers{
+        height: fit-content;
+    }
+}
+@media screen and (max-height: 1216px){
+    .home-audio{
+        height: fit-content;
+    }
+    .speakers{
+        height: fit-content;
+    }
+}
+@media screen and (max-height: 888px){
+    .product-image-container img{
+        height: 300px;
+    }
+}
 
 .cart{
     height: 900px;
@@ -389,6 +411,10 @@ html{
     right: 10px;
     top: 80px;
     backdrop-filter: blur(10px);
+    transition: 0.4s ease;
+}
+.cartToggle{
+    transform: translate(120%);
 }
 .cart-container{
     display: flex;
@@ -440,4 +466,11 @@ html{
 }
 .qty-cart{
     color: white;
+}
+.close-btn{
+    border: none;
+    background: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
 }
