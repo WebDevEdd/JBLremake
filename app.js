@@ -85,9 +85,17 @@ function headphonesArrows(){
         colorSpan.innerHTML = colors[counter];
     })
     leftArrow.addEventListener('click', function(){
+        
+        var el1 = headphones[counter];
+        el1.style.display = 'none';
         counter--;
+        if(counter < 0){
+            counter = 2;
+        }
+        var el2 = headphones[counter];
+        el2.style.display = 'block';
+        colorSpan.innerHTML = colors[counter];
     })
-
 
 }
 headphonesArrows();
