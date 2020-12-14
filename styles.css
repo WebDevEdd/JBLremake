@@ -260,6 +260,7 @@ body{
     color: white;
     text-align: center;
     font-size: 72px;
+    margin-bottom: 50px;
 }
 .home-audio-container{
     width: 100%;
@@ -279,7 +280,7 @@ body{
 .product-cards{
     width: 300px;
     height: 500px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(111, 110, 110);
     backdrop-filter: blur(8px);
     display: flex;
     justify-content: space-between;
@@ -308,4 +309,69 @@ body{
     margin-bottom: 15px;
     cursor: pointer;
     font-size: 16px;
+    transition: 0.2s ease;  
+}
+.add-to-cart-homeaudio:hover{
+    transform: scale(1.2);
+    color: white;
+    box-shadow: 0px 5px 20px 0px rgba(50, 50, 50, 1);
+}
+
+
+
+
+
+.speakers{
+    height: 100vh;
+    width: 100%;
+    background: rgb(76,104,142);
+    background: linear-gradient(180deg, rgba(76,104,142,1) 0%, rgba(28,62,108,1) 46%, rgba(7,13,20,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.speakers-title-container{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.speakers-title{
+    text-align: center;
+    color: white;
+    font-size: 64px;
+}
+.speakers-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.speakers-cards{
+    width: 300px;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    margin: 25px;
+}
+.speakers-cards img{
+    width: 260px;
+}
+.speaker-name{
+    font-size: 40px;
+}
+.speaker-price{
+    font-weight: 100;
+}
+.add-to-cart-speaker{
+    border: none;
+    background-color: #0083cf;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
