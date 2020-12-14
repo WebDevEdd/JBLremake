@@ -175,4 +175,46 @@ body{
 .products-section{
     height: 100vh;
     width: 100%;
+    background: rgb(76,104,142);
+    background: radial-gradient(circle, rgba(76,104,142,1) 0%, rgba(28,62,108,1) 49%, rgba(7,13,20,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#headphoneScrollImg{
+    height: 500px;
+}
+.product-image-container{
+    height: 500px;
+    width: 500px;
+    overflow: hidden;
+    margin: 45px;
+}
+.headphones-title{
+    font-size: 64px;
+    color: white;
+}
+.headphone-name{
+    color: white;
+    font-weight: 100;
+    font-size: 32px;
+}
+.add-to-cart{
+    border: none;
+    background-color: #002c46;
+    padding: 10px 30px;
+    font-size: 24px;
+    color: white;
+    margin: 45px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    color: #0083cf;
+}
+.add-to-cart:hover{
+    background-color: #0083cf;
+    -webkit-box-shadow: 0px 0px 50px -5px #0083cf; 
+    box-shadow: 0px 0px 50px -5px #0083cf;
+    transform: scale(1.2);
+    color: white;
 }
